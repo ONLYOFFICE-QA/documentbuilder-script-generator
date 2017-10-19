@@ -7,5 +7,9 @@ rvm:
 - 2.2.7
 - 2.1.10
 
+before_install:
+  - mkdir ~/sources
+  - git clone https://github.com/ONLYOFFICE/api.onlyoffice.com.git ~/sources/api.onlyoffice.com
+
 script:
-  - rspec
+  - bundle exec rspec
