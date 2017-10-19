@@ -1,3 +1,4 @@
+# Add String methods
 class String
   def to_underscore
     gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')

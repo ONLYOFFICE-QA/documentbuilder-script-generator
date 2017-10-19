@@ -1,9 +1,9 @@
 require 'nokogiri'
 require 'onlyoffice_file_helper'
-require_relative 'generate_builder_scripts/string_extension'
+require_relative 'documentbuilder_script_generator/string_extension'
 
 # Class for generating DocumentBuilder from source
-class GenerateDocumentBuilder
+class DocumentbuilderScriptGenerator
   PRODUCTS = { spreadsheet: 'xlsx', document: 'docx', presentation: 'pptx' }.freeze
   PRODUCT_FOLDER = { spreadsheet: 'Spreadsheetapi', document: 'Textdocumentapi', presentation: 'Presentationapi' }.freeze
 

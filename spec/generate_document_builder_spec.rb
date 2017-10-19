@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe GenerateDocumentBuilder do
+describe DocumentbuilderScriptGenerator do
   folder_path = '/tmp/generate_js'
 
   before :all do
-    GenerateDocumentBuilder.new(output_dir: folder_path).generate_js(:spreadsheet)
+    DocumentbuilderScriptGenerator.new(output_dir: folder_path).generate_js(:spreadsheet)
   end
 
   it '#generate_js do not generate files for classes' do
