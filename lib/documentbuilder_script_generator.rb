@@ -35,13 +35,6 @@ class DocumentbuilderScriptGenerator
     false
   end
 
-  def parse_page_link(product)
-    page = @agent.get(@documentation_page)
-    html = Nokogiri::HTML.parse(page.body)
-    links = html.xpath("//a[@href='/docbuilder/#{PRODUCT_FOLDER[product]}api']/..//ul/li/a").map { |a| a['href'] }
-    links
-  end
-
   def parse_page_code(link)
     html = Nokogiri::HTML.parse(File.read(link))
     pre_tag = html.search('//pre')
