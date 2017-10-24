@@ -20,6 +20,7 @@ class DocumentbuilderScriptGenerator
       folder_path = "#{@output_dir}/#{PRODUCTS[product]}/smoke/#{file.split('/')[-2].to_underscore}"
       file_path = "#{folder_path}/#{file_name}"
       code = parse_page_code(file)
+      next unless code
       OnlyofficeFileHelper::FileHelper.create_folder(folder_path)
       OnlyofficeFileHelper::FileHelper.create_file_with_content(file_path: file_path, content: code)
     end
@@ -38,7 +39,7 @@ class DocumentbuilderScriptGenerator
   def parse_page_code(link)
     html = Nokogiri::HTML.parse(File.read(link))
     pre_tag = html.search('//pre')
-    return nil if pre_tag.nil?
+    return nil if pre_tag.empty?
     pre_tag.text.strip.gsub(/\r\n?/, "\n")
   end
 
