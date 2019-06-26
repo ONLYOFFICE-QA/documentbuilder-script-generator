@@ -12,6 +12,9 @@ before_install:
   - gem update --system
   - mkdir ~/sources
   - git clone https://github.com/ONLYOFFICE/api.onlyoffice.com.git ~/sources/api.onlyoffice.com
+  - cd ~/sources/api.onlyoffice.com
+  - git checkout 7147deb259ebc5148ce3b705ce9b740a068b1464
+  - cd -
 
 script:
   - bundle exec rspec
