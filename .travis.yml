@@ -6,6 +6,10 @@ rvm:
   - 2.5.5
   - 2.4.6
 
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+
 before_install:
   - gem update --system
   - mkdir ~/sources
