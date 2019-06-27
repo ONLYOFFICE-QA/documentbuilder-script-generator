@@ -1,17 +1,22 @@
 language: ruby
 
 rvm:
-- ruby-head
-- 2.5.0
-- 2.4.3
-- 2.3.6
-- 2.2.9
-- 2.1.10
+  - ruby-head
+  - 2.6.3
+  - 2.5.5
+  - 2.4.6
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
 
 before_install:
   - gem update --system
   - mkdir ~/sources
   - git clone https://github.com/ONLYOFFICE/api.onlyoffice.com.git ~/sources/api.onlyoffice.com
+  - cd ~/sources/api.onlyoffice.com
+  - git checkout 7147deb259ebc5148ce3b705ce9b740a068b1464
+  - cd -
 
 script:
   - bundle exec rspec
