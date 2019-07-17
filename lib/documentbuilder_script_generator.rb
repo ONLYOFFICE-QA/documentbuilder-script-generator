@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'nokogiri'
 require 'onlyoffice_file_helper'
 require_relative 'documentbuilder_script_generator/string_extension'

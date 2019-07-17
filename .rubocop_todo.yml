@@ -17,20 +17,6 @@ Metrics/BlockLength:
 Metrics/MethodLength:
   Max: 11
 
-# Offense count: 7
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, never
-Style/FrozenStringLiteralComment:
-  Exclude:
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'lib/documentbuilder_script_generator.rb'
-    - 'lib/documentbuilder_script_generator/string_extension.rb'
-    - 'spec/generate_document_builder_spec.rb'
-    - 'spec/spec_helper.rb'
-    - 'spec/string_extension_spec.rb'
-
 # Offense count: 13
 # Cop supports --auto-correct.
 # Configuration parameters: AutoCorrect, AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
