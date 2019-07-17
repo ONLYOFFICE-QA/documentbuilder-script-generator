@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Add String methods
 class String
   def to_underscore

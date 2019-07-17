@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'nokogiri'
 require 'onlyoffice_file_helper'
 require_relative 'documentbuilder_script_generator/string_extension'
@@ -17,10 +19,12 @@ class DocumentbuilderScriptGenerator
     files.each do |file|
       file_name = "#{parse_method_name(file)}.js"
       next if file_excluded?(file_name)
+
       folder_path = "#{@output_dir}/#{PRODUCTS[product]}/smoke/#{file.split('/')[-2].to_underscore}"
       file_path = "#{folder_path}/#{file_name}"
       code = parse_page_code(file)
       next unless code
+
       OnlyofficeFileHelper::FileHelper.create_folder(folder_path)
       OnlyofficeFileHelper::FileHelper.create_file_with_content(file_path: file_path, content: code)
     end
@@ -33,6 +37,7 @@ class DocumentbuilderScriptGenerator
     return true if file_name.start_with?('api_')
     return true if file_name.start_with?('structure_of')
     return true if file_name == 'api.js'
+
     false
   end
 
@@ -40,6 +45,7 @@ class DocumentbuilderScriptGenerator
     html = Nokogiri::HTML.parse(File.read(link))
     pre_tag = html.search('//pre')
     return nil if pre_tag.empty?
+
     pre_tag.text.strip.gsub(/\r\n?/, "\n") + "\n"
   end
 

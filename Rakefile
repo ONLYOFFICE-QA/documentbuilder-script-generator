@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/documentbuilder_script_generator'
 
 task default: %w[generate_js_doc_builder]
