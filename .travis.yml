@@ -11,7 +11,6 @@ matrix:
     - rvm: ruby-head
 
 before_install:
-  - gem update --system
   - mkdir ~/sources
   - git clone https://github.com/ONLYOFFICE/api.onlyoffice.com.git ~/sources/api.onlyoffice.com
   - cd ~/sources/api.onlyoffice.com
