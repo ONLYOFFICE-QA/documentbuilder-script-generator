@@ -3,7 +3,7 @@ GEM
   specs:
     ast (2.4.1)
     childprocess (4.0.0)
-    codecov (0.2.2)
+    codecov (0.2.3)
       colorize
       json
       simplecov
