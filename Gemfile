@@ -7,8 +7,8 @@ gem 'onlyoffice_file_helper'
 gem 'rake', '>= 12'
 
 group :test do
-  gem 'codecov', require: false
   gem 'rspec'
+  gem 'simplecov', require: false
 end
 
 group :development do
