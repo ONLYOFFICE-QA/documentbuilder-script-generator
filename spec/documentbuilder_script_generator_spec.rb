@@ -6,10 +6,14 @@ describe DocumentbuilderScriptGenerator do
   folder_path = '/tmp/generate_js'
 
   before :all do
-    generator = DocumentbuilderScriptGenerator.new(output_dir: folder_path)
+    generator = described_class.new(output_dir: folder_path)
     generator.generate_js(:document)
     generator.generate_js(:spreadsheet)
     generator.generate_js(:presentation)
+  end
+
+  after :all do
+    OnlyofficeFileHelper::FileHelper.delete_directory(folder_path)
   end
 
   it '#generate_js do not generate files for classes' do
@@ -38,9 +42,5 @@ describe DocumentbuilderScriptGenerator do
   it '#generate_js output files not containg empty file' do
     files = OnlyofficeFileHelper::FileHelper.list_file_in_directory(folder_path)
     expect(files).not_to include("#{folder_path}/docx/smoke/api_unsupported/get_class_type.js")
-  end
-
-  after :all do
-    OnlyofficeFileHelper::FileHelper.delete_directory(folder_path)
   end
 end
