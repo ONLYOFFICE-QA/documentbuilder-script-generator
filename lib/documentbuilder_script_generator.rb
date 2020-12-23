@@ -46,7 +46,7 @@ class DocumentbuilderScriptGenerator
     pre_tag = html.search('//pre')
     return nil if pre_tag.empty?
 
-    pre_tag.text.strip.gsub(/\r\n?/, "\n") + "\n"
+    "#{pre_tag.text.strip.gsub(/\r\n?/, "\n")}\n"
   end
 
   def parse_method_name(link)
