@@ -6,6 +6,7 @@
 
 * Use `markdownlint` for checking md files in CI
 * Add check for 100% test coverage in CI
+* c
 
 ### Changes
 
