@@ -6,7 +6,8 @@
 
 * Use `markdownlint` for checking md files in CI
 * Add check for 100% test coverage in CI
-* c
+* Add `rubocop` check in CI
+* Add support of `rubocop-performance`, `rubocop-rake`, `rubocop-rspec`
 
 ### Changes
 
