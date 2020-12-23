@@ -6,7 +6,9 @@ require_relative 'documentbuilder_script_generator/string_extension'
 
 # Class for generating DocumentBuilder from source
 class DocumentbuilderScriptGenerator
+  # @return [Hash] extensions by product hash
   PRODUCTS = { spreadsheet: 'xlsx', document: 'docx', presentation: 'pptx' }.freeze
+  # @return [Hash] product folders by product
   PRODUCT_FOLDER = { spreadsheet: 'Spreadsheetapi', document: 'Textdocumentapi', presentation: 'Presentationapi' }.freeze
 
   def initialize(api_onlyoffice_repo_path: nil, output_dir: nil)
@@ -14,6 +16,9 @@ class DocumentbuilderScriptGenerator
     @output_dir = output_dir || "#{ENV['HOME']}/sources/doc-builder-testing/asserts/js"
   end
 
+  # Generate js files of produce
+  # @param [Symbol] product name
+  # @return [nil]
   def generate_js(product)
     files = OnlyofficeFileHelper::FileHelper.list_file_in_directory("#{@input_dir}/#{PRODUCT_FOLDER[product]}")
     files.each do |file|
@@ -41,6 +46,9 @@ class DocumentbuilderScriptGenerator
     false
   end
 
+  # Parse page code
+  # @param [String] link file path
+  # @return [String] tag
   def parse_page_code(link)
     html = Nokogiri::HTML.parse(File.read(link))
     pre_tag = html.search('//pre')
@@ -49,6 +57,9 @@ class DocumentbuilderScriptGenerator
     "#{pre_tag.text.strip.gsub(/\r\n?/, "\n")}\n"
   end
 
+  # Parse method name
+  # @param [String] link file path
+  # @return [String] result
   def parse_method_name(link)
     html = Nokogiri::HTML.parse(File.read(link))
     html.search('//h1/span').first.text.to_s.to_underscore
