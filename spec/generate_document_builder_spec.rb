@@ -6,7 +6,7 @@ describe DocumentbuilderScriptGenerator do
   folder_path = '/tmp/generate_js'
 
   before :all do
-    generator = DocumentbuilderScriptGenerator.new(output_dir: folder_path)
+    generator = described_class.new(output_dir: folder_path)
     generator.generate_js(:document)
     generator.generate_js(:spreadsheet)
     generator.generate_js(:presentation)
