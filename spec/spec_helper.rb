@@ -3,6 +3,4 @@
 require 'simplecov'
 SimpleCov.start
 
-require 'codecov'
-SimpleCov.formatter = SimpleCov::Formatter::Codecov
 require_relative '../lib/documentbuilder_script_generator'
