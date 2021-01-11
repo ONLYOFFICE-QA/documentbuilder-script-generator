@@ -10,6 +10,7 @@
 * Add support of `rubocop-performance`, `rubocop-rake`, `rubocop-rspec`
 * Add `yard` check that 100% code is documented in CI
 * Add `dependabot` config
+* Enable `branch` coverage in `simplecov` config (and check in CI)
 
 ### Changes
 
