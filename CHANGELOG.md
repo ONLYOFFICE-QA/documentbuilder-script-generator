@@ -11,6 +11,7 @@
 * Add `yard` check that 100% code is documented in CI
 * Add `dependabot` config
 * Enable `branch` coverage in `simplecov` config (and check in CI)
+* Add `ruby-3.0` to CI
 
 ### Changes
 
