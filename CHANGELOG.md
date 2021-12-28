@@ -12,9 +12,11 @@
 * Add `dependabot` config
 * Enable `branch` coverage in `simplecov` config (and check in CI)
 * Add `ruby-3.0` to CI
+* Add `ruby-3.1` in CI
 
 ### Changes
 
 * Use GitHub Actions instead of TravisCI
 * Remove usage of `codecov`
 * Add missing documentation
+* Remove `ruby-2.5` from CI since it's EOLed
