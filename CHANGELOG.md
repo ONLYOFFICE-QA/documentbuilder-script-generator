@@ -26,3 +26,4 @@
 * Add missing documentation
 * Remove `ruby-2.5` from CI since it's EOLed
 * Remove `codeclimate` support since we don't use it any more
+* Check `dependabot` at 8:00 Moscow time daily
