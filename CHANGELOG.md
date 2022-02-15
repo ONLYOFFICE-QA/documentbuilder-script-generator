@@ -14,6 +14,10 @@
 * Add `ruby-3.0` to CI
 * Add `ruby-3.1` in CI
 
+### Fixes
+
+* Fix `markdownlint` failure because of old `nodejs` in CI
+
 ### Changes
 
 * Use GitHub Actions instead of TravisCI
