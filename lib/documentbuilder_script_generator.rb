@@ -12,8 +12,8 @@ class DocumentbuilderScriptGenerator
   PRODUCT_FOLDER = { spreadsheet: 'Spreadsheetapi', document: 'Textdocumentapi', presentation: 'Presentationapi' }.freeze
 
   def initialize(api_onlyoffice_repo_path: nil, output_dir: nil)
-    @input_dir = api_onlyoffice_repo_path || "#{ENV['HOME']}/sources/api.onlyoffice.com/web/Views/DocBuilder/"
-    @output_dir = output_dir || "#{ENV['HOME']}/sources/doc-builder-testing/asserts/js"
+    @input_dir = api_onlyoffice_repo_path || "#{Dir.home}/sources/api.onlyoffice.com/web/Views/DocBuilder/"
+    @output_dir = output_dir || "#{Dir.home}/sources/doc-builder-testing/asserts/js"
   end
 
   # Generate js files of produce
