@@ -13,6 +13,7 @@
 * Enable `branch` coverage in `simplecov` config (and check in CI)
 * Add `ruby-3.0` to CI
 * Add `ruby-3.1` in CI
+* Add `ruby-3.2` in CI
 * Add `yamllint` check in CI
 
 ### Fixes
@@ -28,3 +29,4 @@
 * Remove `codeclimate` support since we don't use it any more
 * Check `dependabot` at 8:00 Moscow time daily
 * Fix `rubocop-1.28.1` code issues
+* Drop `ruby-2.7` support, since it's EOLed
