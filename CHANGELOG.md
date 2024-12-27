@@ -17,6 +17,7 @@
 * Add `ruby-3.3` in CI
 * Add `yamllint` check in CI
 * Add `dependabot` check for `GitHub Actions`
+* Add `ruby-3.4` to CI
 
 ### Fixes
 
@@ -32,3 +33,4 @@
 * Check `dependabot` at 8:00 Moscow time daily
 * Fix `rubocop-1.28.1` code issues
 * Drop `ruby-2.7` support, since it's EOLed
+* Remove `ruby-3.0` from CI, since it's EOLed
