@@ -1,6 +1,8 @@
 # documentbuilder-script-generator
 
-documentbuilder-script-generator
+**This project is deprecated**\
+api.onlyoffice.com rewritten on `docusaurus` engine.\
+This project is obsolete and no longer needed.
 
 ## How to use
 
